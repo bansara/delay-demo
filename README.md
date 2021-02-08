@@ -1,5 +1,6 @@
-#Web Audio API
-##"Analog" Delay effect model
+# Web Audio API
+
+## "Analog" Delay effect model
 
 _Inspired by the MXR Carbon Copy Delay Pedal_
 
