@@ -14,6 +14,10 @@ body {
   height: 100vh;
   font-family: "Courier New", Courier, monospace;
 }
+a,
+a:visited {
+  color: var(--green);
+}
 label {
   margin: 0.75rem;
   font-size: 1.25rem;
@@ -21,6 +25,9 @@ label {
 select {
   font-size: 1.25rem;
   font-family: "Courier New", Courier, monospace;
+}
+p.github {
+  font-size: 0.75rem;
 }
 /*
   code below modified from: https://css-tricks.com/styling-cross-browser-compatible-range-inputs-css/
