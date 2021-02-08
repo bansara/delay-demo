@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Web Audio Delay Demo</title>
+    <link rel="icon" href="/favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="style.css" />
+    <script src="app.js" defer></script>
+  </head>
+  <body>
+    <audio src="Funk.mp3" controls id="audio" loop></audio>
+    <label for="delayTime">Delay Time</label>
+    <select
+      name="delayTime"
+      id="delayTime"
+      onchange="(e) => console.log('change')"
+    >
+      <option value="0.125">1/16th</option>
+      <option value="0.25" selected>1/8th</option>
+      <option value="0.375">3/16th</option>
+      <option value="0.5">1/4</option>
+    </select>
+    <label for="dryWet">Dry / Wet mix</label>
+    <input
+      type="range"
+      name="dryWet"
+      id="dryWet"
+      min="0"
+      max="1"
+      step="0.01"
+      value="0.5"
+    />
+    <label for="feedback">Feedback</label>
+    <input
+      type="range"
+      name="feedback"
+      id="feedback"
+      min="0"
+      max="1"
+      step="0.01"
+      value="0.3"
+    />
+    <label for="filterFreq">Filter Frequency</label>
+    <input
+      type="range"
+      name="filterFreq"
+      id="filterFreq"
+      min="0"
+      max="1"
+      step="0.01"
+      value="0.65"
+    />
+    <label for="lfoFreq">LFO Frequency</label>
+    <input
+      type="range"
+      name="lfoFreq"
+      id="lfoFreq"
+      min="0.25"
+      max="5"
+      step="0.01"
+      value="0.5"
+    />
+    <label for="lfoGain">LFO Gain</label>
+    <input
+      type="range"
+      name="lfoGain"
+      id="lfoGain"
+      min="0.0001"
+      max="0.002"
+      step="0.0001"
+      value="0.0005"
+    />
+  </body>
+</html>
