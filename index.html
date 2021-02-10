@@ -10,67 +10,79 @@
   </head>
   <body>
     <audio src="Funk.mp3" controls id="audio" loop></audio>
-    <label for="delayTime">Delay Time</label>
-    <select
-      name="delayTime"
-      id="delayTime"
-      onchange="(e) => console.log('change')"
-    >
-      <option value="0.125">1/16th</option>
-      <option value="0.25" selected>1/8th</option>
-      <option value="0.375">3/16th</option>
-      <option value="0.5">1/4</option>
-    </select>
-    <label for="dryWet">Dry / Wet mix</label>
-    <input
-      type="range"
-      name="dryWet"
-      id="dryWet"
-      min="0"
-      max="1"
-      step="0.01"
-      value="0.5"
-    />
-    <label for="feedback">Feedback</label>
-    <input
-      type="range"
-      name="feedback"
-      id="feedback"
-      min="0"
-      max="1"
-      step="0.01"
-      value="0.3"
-    />
-    <label for="filterFreq">Filter Frequency</label>
-    <input
-      type="range"
-      name="filterFreq"
-      id="filterFreq"
-      min="0"
-      max="1"
-      step="0.01"
-      value="0.65"
-    />
-    <label for="lfoFreq">LFO Frequency</label>
-    <input
-      type="range"
-      name="lfoFreq"
-      id="lfoFreq"
-      min="0.25"
-      max="5"
-      step="0.01"
-      value="0.5"
-    />
-    <label for="lfoGain">LFO Gain</label>
-    <input
-      type="range"
-      name="lfoGain"
-      id="lfoGain"
-      min="0.0001"
-      max="0.002"
-      step="0.0001"
-      value="0.0005"
-    />
+    <div class="param">
+      <select
+        name="delayTime"
+        id="delayTime"
+        onchange="(e) => console.log('change')"
+      >
+        <option value="0.125">1/16th</option>
+        <option value="0.25" selected>1/8th</option>
+        <option value="0.375">3/16th</option>
+        <option value="0.5">1/4</option>
+      </select>
+      <label for="delayTime">Delay Time</label>
+    </div>
+    <div class="param">
+      <input
+        type="range"
+        name="dryWet"
+        id="dryWet"
+        min="0"
+        max="1"
+        step="0.01"
+        value="0.5"
+      />
+      <label for="dryWet">Dry / Wet mix</label>
+    </div>
+    <div class="param">
+      <input
+        type="range"
+        name="feedback"
+        id="feedback"
+        min="0"
+        max="1"
+        step="0.01"
+        value="0.3"
+      />
+      <label for="feedback">Feedback</label>
+    </div>
+    <div class="param">
+      <input
+        type="range"
+        name="filterFreq"
+        id="filterFreq"
+        min="0"
+        max="1"
+        step="0.01"
+        value="0.65"
+      />
+      <label for="filterFreq">Filter Frequency</label>
+    </div>
+    <div class="param">
+      <input
+        type="range"
+        name="lfoFreq"
+        id="lfoFreq"
+        min="0.25"
+        max="5"
+        step="0.01"
+        value="0.5"
+      />
+      <label for="lfoFreq">LFO Frequency</label>
+    </div>
+    <div class="param">
+      <input
+        type="range"
+        name="lfoGain"
+        id="lfoGain"
+        min="0.0001"
+        max="0.002"
+        step="0.0001"
+        value="0.0005"
+      />
+      <label for="lfoGain">LFO Gain</label>
+    </div>
     <p class="github">
       View source on <a href="https://github.com/bansara/delay-demo">Github</a>
     </p>
