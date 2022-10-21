@@ -9,7 +9,11 @@
     <script src="app.js" defer></script>
   </head>
   <body>
-    <audio src="Funk.mp3" controls id="audio" loop></audio>
+    <div id="context">
+      <button id="startContext">Start Context</button>
+      <p>Context: <span id="context__state" role="alert"></span></p>
+    </div>
+    <audio src="Funk.mp3" id="audio" controls loop></audio>
     <div class="param">
       <select
         name="delayTime"

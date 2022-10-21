@@ -130,3 +130,21 @@ input[type="range"]::-ms-thumb {
   background: #ffffff;
   cursor: pointer;
 }
+#context {
+  margin: 2rem auto;
+  width: 400px;
+  display: flex;
+  justify-content: space-between;
+}
+
+#context button {
+  background-color: var(--green);
+  border: none;
+  font-size: 1rem;
+  border-radius: 2px;
+}
+
+#context__state {
+  font-size: 1.25rem;
+  text-transform: uppercase;
+}

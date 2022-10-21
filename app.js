@@ -91,13 +91,6 @@ const delay = new Delay(context, 0.375);
 
 // get audio element and listen for play event
 const audioPlayer = document.getElementById("audio");
-audioPlayer.addEventListener("play", () => {
-  // Browser requires a user interaction before starting
-  // audio context
-  if (context.state !== "running") {
-    context.resume();
-  }
-});
 
 // connect HTML audio element to audio context
 const sourceNode = context.createMediaElementSource(audioPlayer);
@@ -105,6 +98,26 @@ const sourceNode = context.createMediaElementSource(audioPlayer);
 // wire everything together
 sourceNode.connect(delay.input);
 delay.output.connect(context.destination);
+
+const contextState = document.getElementById("context__state");
+document.addEventListener("DOMContentLoaded", () => {
+  contextState.innerText = context.state;
+});
+
+function resumeContext() {
+  // Browser requires a user interaction before starting
+  // audio context
+  if (context.state !== "running") {
+    context.resume().then(() => {
+      contextState.innerText = context.state;
+    });
+  }
+}
+document
+  .getElementById("startContext")
+  .addEventListener("click", resumeContext);
+
+audioPlayer.addEventListener("play", resumeContext);
 
 // listen for inputs and call Delay class methods
 const delayTime = document.getElementById("delayTime");
